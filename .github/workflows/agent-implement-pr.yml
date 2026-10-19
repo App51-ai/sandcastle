@@ -7,7 +7,7 @@ on:
 jobs:
   implement-pr:
     if: github.event.label.name == 'agent:implement'
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-2vcpu-ubuntu-2404
     timeout-minutes: 60
     concurrency:
       group: agent-mutate-pr-${{ github.event.pull_request.number }}
